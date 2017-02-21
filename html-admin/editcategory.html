@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <title>Админ-панель</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/admin.css?version=1">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="shortcut icon" href="../images/icons/adminfavicon.png">
+    <script src="../scripts/jquery-min.js"></script>
+    <script src="../scripts/jquery-ui-min.js"></script>
+    <script src="../scripts/admin/texthighlighter/rangy-core.js"></script>
+    <script src="../scripts/admin/texthighlighter/jquery.texthighlighter.js"></script>
+    <script src="../scripts/admin/mediadescription.js"></script>
+    <script src="../scripts/admin/error.js"></script>
+    <script src="../scripts/admin/aliasmaker.js"></script>
+    <script src="../scripts/admin/click-actions.js?version=1"></script>
+    <script src="../scripts/admin/categories.js?version=1"></script>
+</head>
+    <body>
+    <!-- header -->
+    <header>
+        <div class="flex-row">
+            <div class="title">Вы вошли как <span id="moderator">superadmin</span></div>
+            <div class="buttons">
+                <a href="#">Выход</a>
+                <a href="categories.html">Разделы</a>
+            </div>
+        </div>
+    </header>
+    <!-- header КОНЕЦ -->
+    <!-- Сообщение об ошибке -->
+    <div class="error-holder">
+        <span>Error</span>
+    </div>
+    <!-- Сообщение об ошибке КОНЕЦ -->
+    <div class="holder type flex-container flex-col padding20">
+        <!-- Языковая панель -->
+        <div class="options-header">
+            <a href="#" class="button ">de</a>
+            <a href="#" class="button ">en</a>
+            <a href="#" class="button active">ru</a>
+        </div>
+        <!-- Языковая панель КОНЕЦ -->
+        <!-- Форма редактора -->
+        <div class="flex-row flex-full">
+            <div class="flex-col flex-half padding20">
+                <div class="input-row">
+                    <label for="title">Заголовок категории</label>
+                    <input type="text" id="title">
+                </div>
+                <div class="input-row">
+                    <label for="alias">URL категории (без домена и /)</label>
+                    <input type="text" id="alias">
+                </div>
+                <div class="input-row">
+                    <label for="menutitle">Заголовок категории в меню</label>
+                    <input type="text" id="menutitle">
+                </div>
+            </div>
+            <div class="flex-col flex-half padding20">
+                <div class="input-row">
+                    <label for="htmltitle">META title</label>
+                    <input type="text" id="htmltitle">
+                </div>
+                <div class="input-row">
+                    <label for="htmldescription">META description</label>
+                    <input type="text" id="htmldescription">
+                </div>
+                <div class="input-row">
+                    <label for="htmlkeywords">META keywords</label>
+                    <input type="text" id="htmlkeywords">
+                </div>
+            </div>
+        </div>
+        <div class="flex-col flex-full padding20">
+            <div class="input-row flex-row">
+                <span class="checker ismain"></span>
+                <span class="label">Главная страница</span>
+            </div>
+        </div>
+        <div class="flex-col flex-full padding20">
+            <label for="shortdescription">Краткое описание</label>
+            <textarea id="shortdescription"></textarea>
+        </div>
+        <div class="flex-col flex-full padding20">
+            <div class="mediaelement article-mediadescr clear">
+                <label for="mediacontent">Текст на странице категории</label>
+                <div id="mediacontent" class="mediacontent" style="display: none"></div>
+            </div>
+        </div>
+        <!-- Форма редактора КОНЕЦ -->
+        <!-- История модерации -->
+        <div class="flex-col flex-full padding20">
+            <div class="open-bayan link">История модерации:</div>
+            <div class="bayan v-list">
+                <div class="v-item flex-row">
+                    <div class="title">superadmin</div>
+                    <div class="created flex-col">
+                        <span>Создана: Чт, 26. Янв 2017, в 20:24</span>
+                    </div>
+                </div>
+                <div class="v-item flex-row">
+                    <div class="title">superadmin</div>
+                    <div class="created flex-col">
+                        <span>Отмодерирована: Пт, 27. Янв 2017, в 22:22</span>
+                    </div>
+                </div>
+                <div class="v-item flex-row">
+                    <div class="title">superadmin</div>
+                    <div class="created flex-col">
+                        <span>Отмодерирована: Пн, 30. Янв 2017, в 18:39</span>
+                    </div>
+                </div>
+                <div class="v-item flex-row">
+                    <div class="title">superadmin</div>
+                    <div class="created flex-col">
+                        <span>Отмодерирована: Вт, 31. Янв 2017, в 20:22</span>
+                    </div>
+                </div>
+                <div class="v-item flex-row">
+                    <div class="title">superadmin</div>
+                    <div class="created flex-col">
+                        <span>Отмодерирована: Вт, 07. Фев 2017, в 11:0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- История модерации КОНЕЦ -->
+        <!-- Кнопки -->
+        <div class="flex-col flex-full padding20">
+            <div class="buttons id-info flex-row flex-centered">
+                <div class="loader"></div>
+                <div class="button green" id="edit-category">Сохранить</div>
+                <div class="button red" id="delete-category">Удалить</div>
+                <a href="categories.html" class="button">Отмена</a>
+            </div>
+        </div>
+        <!-- Кнопки КОНЕЦ -->
+    </div>
+    <!-- footer -->
+    <footer>
+        <small>#BlondieCode © 2017</small>
+    </footer>
+    <!-- footer КОНЕЦ -->
+</body>
+</html>
+

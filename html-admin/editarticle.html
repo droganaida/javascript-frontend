@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <title>Админ-панель</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/admin.css?version=1">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="shortcut icon" href="../images/icons/adminfavicon.png">
+    <script src="../scripts/jquery-min.js"></script>
+    <script src="../scripts/admin/texthighlighter/rangy-core.js"></script>
+    <script src="../scripts/admin/texthighlighter/jquery.texthighlighter.js"></script>
+    <script src="../scripts/admin/mediadescription.js"></script>
+    <script src="../scripts/admin/error.js"></script>
+    <script src="../scripts/admin/tags.js"></script>
+    <script src="../scripts/admin/aliasmaker.js"></script>
+    <script src="../scripts/admin/click-actions.js?version=1"></script>
+    <script src="../scripts/admin/images-actions.js?version=1"></script>
+    <script src="../scripts/admin/articles.js?version=1"></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="flex-row">
+            <div class="title">Вы вошли как <span id="moderator">superadmin</span></div>
+            <div class="buttons">
+                <a href="#">Выход</a>
+                <a href="categories.html">Разделы</a>
+            </div>
+        </div>
+    </header>
+    <!-- header КОНЕЦ -->
+    <!-- Сообщение об ошибке -->
+    <div class="error-holder">
+        <span>Error</span>
+    </div>
+    <!-- Сообщение об ошибке КОНЕЦ -->
+    <div class="holder type flex-container flex-col padding20">
+        <!-- Языковая панель -->
+        <div class="options-header">
+            <a href="#" class="button ">de</a>
+            <a href="#" class="button ">en</a>
+            <a href="#" class="button active">ru</a>
+        </div>
+        <!-- Языковая панель КОНЕЦ -->
+        <!-- Форма редактора -->
+        <div class="flex-col flex-full padding20">
+            <label for="imgarticle">Главное изображение</label>
+            <div class="logo-holder imgarticle">
+                <img src="../files/03/mainimage.jpg">
+            </div>
+            <div class="flex-row">
+                <div class="button green imgarticle" id="main-article-img">+ Добавить</div>
+                <div class="button red" id="del-main-img">Удалить</div>
+                <div style="height: 0; width: 0; overflow: hidden; float: left;">
+                    <input id="imgarticle" type="file" name="shopimage" accept="image/*">
+                </div>
+            </div>
+        </div>
+        <div class="flex-row flex-full">
+            <div class="flex-col flex-half padding20">
+                <div class="input-row">
+                    <label for="title">Название статьи</label>
+                    <input type="text" id="title">
+                </div>
+                <div class="input-row">
+                    <label for="alias">URL страницы (без домена и /)</label>
+                    <input type="text" id="alias">
+                </div>
+                <div class="input-row">
+                    <span class="label">Категории статьи</span>
+                    <div class="cat-holder check-holder flex-row flex-row-wrap" id="article-categories">
+                        <div class="cat check active">Няшные котики</div>
+                        <div class="cat check">Боня - король вечеринок</div>
+                        <div class="cat check">Настоящие леди</div>
+                        <div class="cat check">Коты - спасение человечества</div>
+                        <div class="cat check">Кошачий вопрос</div>
+                        <div class="cat check">Без кота жизнь не та</div>
+                        <div class="cat check">Кот - это на всю жизнь</div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-col flex-half padding20">
+                <div class="input-row">
+                    <label for="htmltitle">META title</label>
+                    <input type="text" id="htmltitle">
+                </div>
+                <div class="input-row">
+                    <label for="htmldescription">META description</label>
+                    <input type="text" id="htmldescription">
+                </div>
+                <div class="input-row">
+                    <label for="htmlkeywords">META keywords</label>
+                    <input type="text" id="htmlkeywords">
+                </div>
+                <div class="input-row flex-row">
+                    <div class="flex-col flex-half tag-holder">
+                        <label for="tags">Введите тег и нажмите ВВОД</label>
+                        <input id="tags" type="text">
+                        <div class="autofill-bar"></div>
+                    </div>
+                    <div class="flex-col flex-half">
+                        <label for="article-tags">Теги статьи</label>
+                        <div id="article-tags" class="tags-holder">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-col flex-full padding20">
+            <label for="shortdescription">Краткое описание</label>
+            <textarea id="shortdescription"></textarea>
+        </div>
+        <div class="flex-col flex-full padding20">
+            <div class="mediaelement article-mediadescr clear">
+                <label for="mediacontent">Текст на странице статьи</label>
+                <div id="mediacontent" class="mediacontent" style="display: none"></div>
+            </div>
+        </div>
+        <!-- Форма редактора КОНЕЦ -->
+        <!-- История модерации -->
+        <div class="flex-col flex-full padding20">
+            <div class="open-bayan link">История модерации:</div>
+            <div class="bayan v-list">
+                <div class="v-item flex-row">
+                    <div class="title">superadmin</div>
+                    <div class="created flex-col">
+                        <span>Создана: Пт, 27. Янв 2017, в 18:43</span>
+                    </div>
+                </div>
+
+                <div class="v-item flex-row">
+                    <div class="title">superadmin</div>
+                    <div class="created flex-col">
+                        <span>Отмодерирована: Пт, 27. Янв 2017, в 21:46</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- История модерации КОНЕЦ -->
+        <!-- Кнопки -->
+        <div class="flex-col flex-full padding20">
+            <div class="buttons id-info flex-row flex-centered">
+                <div class="button green" id="edit-article">Сохранить</div>
+                <div class="button red" id="delete-article">Удалить</div>
+                <a href="articles.html" class="button">Отмена</a>
+                <div class="loader"></div>
+            </div>
+        </div>
+        <!-- Кнопки КОНЕЦ -->
+    </div>
+    <!-- footer -->
+    <footer>
+        <small>#BlondieCode © 2017</small>
+    </footer>
+    <!-- footer КОНЕЦ -->
+    </body>
+</html>
+

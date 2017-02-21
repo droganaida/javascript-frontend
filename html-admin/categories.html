@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <title>Админ-панель</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/admin.css?version=1">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="shortcut icon" href="../images/icons/adminfavicon.png">
+    <script src="../scripts/jquery-min.js"></script>
+    <script src="../scripts/jquery-ui-min.js"></script>
+    <script src="../scripts/admin/error.js"></script>
+    <script src="../scripts/admin/aliasmaker.js"></script>
+    <script src="../scripts/admin/click-actions.js?version=1"></script>
+    <script src="../scripts/admin/categories.js?version=1"></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="flex-row">
+            <div class="title">Вы вошли как <span id="moderator">superadmin</span></div>
+            <div class="buttons">
+                <a href="#">Выход</a>
+                <a href="categories.html" class="active">Разделы</a>
+            </div>
+        </div>
+    </header>
+    <!-- header КОНЕЦ -->
+    <!-- Сообщение об ошибке -->
+    <div class="error-holder">
+        <span>Error</span>
+    </div>
+    <!-- Сообщение об ошибке КОНЕЦ -->
+    <div class="holder type">
+        <div class="options-header">
+            <div id="b-new-category" class="button green">Добавить категорию +</div>
+        </div>
+        <div class="holder c-holder">
+            <div class="blog-content">
+                <ul class="ui-sortable" id="sortable">
+                    <!-- Главная страница -->
+                    <li class="ui-state-default ismain ui-sortable-handle">
+                        <div class="text">
+                            <span class="title">Добро пожаловать на BlondieBlog</span>
+                            <span class="small">Главная страница (0 статей)</span>
+                        </div>
+                        <div class="buttons">
+                            <a href="editcategory.html" class="edit">Редактор</a>
+                        </div>
+                    </li>
+                    <!-- Главная страница КОНЕЦ -->
+                    <!-- Категория -->
+                    <li class="ui-state-default ui-sortable-handle">
+                        <div class="text">
+                            <span class="title">Няшные котики</span>
+                            <span class="small">4 статьи</span>
+                        </div>
+                        <div class="buttons">
+                            <a href="articles.html" class="article">Статьи</a>
+                            <a href="editcategory.html" class="edit">Редактор</a>
+                        </div>
+                    </li>
+                    <!-- Категория КОНЕЦ -->
+                    <li class="ui-state-default ui-sortable-handle">
+                        <div class="text">
+                            <span class="title">Боня - король вечеринок</span>
+                            <span class="small">4 статьи</span>
+                        </div>
+                        <div class="buttons">
+                            <a href="articles.html" class="article">Статьи</a>
+                            <a href="editcategory.html" class="edit">Редактор</a>
+                        </div>
+                    </li>
+                    <li class="ui-state-default ui-sortable-handle">
+                        <div class="text">
+                            <span class="title">Настоящие леди</span>
+                            <span class="small">3 статьи</span>
+                        </div>
+                        <div class="buttons">
+                            <a href="articles.html" class="article">Статьи</a>
+                            <a href="editcategory.html" class="edit">Редактор</a>
+                        </div>
+                    </li>
+                    <li class="ui-state-default ui-sortable-handle">
+                        <div class="text">
+                            <span class="title">Коты - спасение человечества</span>
+                            <span class="small">6 статей</span>
+                        </div>
+                        <div class="buttons">
+                            <a href="articles.html" class="article">Статьи</a>
+                            <a href="editcategory.html" class="edit">Редактор</a>
+                        </div>
+                    </li>
+                    <li class="ui-state-default ui-sortable-handle">
+                        <div class="text">
+                            <span class="title">Кошачий вопрос</span>
+                            <span class="small">4 статьи</span>
+                        </div>
+                        <div class="buttons">
+                            <a href="articles.html" class="article">Статьи</a>
+                            <a href="editcategory.html" class="edit">Редактор</a>
+                        </div>
+                    </li>
+                    <li class="ui-state-default ui-sortable-handle">
+                        <div class="text">
+                            <span class="title">Без кота жизнь не та</span>
+                            <span class="small">8 статей</span>
+                        </div>
+                        <div class="buttons">
+                            <a href="articles.html" class="article">Статьи</a>
+                            <a href="editcategory.html" class="edit">Редактор</a>
+                        </div>
+                    </li>
+                    <li class="ui-state-default ui-sortable-handle">
+                        <div class="text">
+                            <span class="title">Кот - это на всю жизнь</span>
+                            <span class="small">5 статей</span>
+                        </div>
+                        <div class="buttons">
+                            <a href="articles.html" class="article">Статьи</a>
+                            <a href="editcategory.html" class="edit">Редактор</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <small>#BlondieCode © 2017</small>
+    </footer>
+    <!-- footer КОНЕЦ -->
+</body>
+</html>

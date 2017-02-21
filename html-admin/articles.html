@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr"><head>
+    <title>Админ-панель</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/admin.css?version=1">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="shortcut icon" href="../images/icons/adminfavicon.png">
+    <script src="../scripts/jquery-min.js"></script>
+    <script src="../scripts/admin/error.js"></script>
+    <script src="../scripts/admin/articles.js?version=1"></script>
+<body>
+    <!-- header -->
+    <header>
+        <div class="flex-row">
+            <div class="title">Вы вошли как <span id="moderator">superadmin</span></div>
+            <div class="buttons">
+                <a href="#">Выход</a>
+                <a href="categories.html">Разделы</a>
+            </div>
+        </div>
+    </header>
+    <!-- header КОНЕЦ -->
+    <!-- Сообщение об ошибке -->
+    <div class="error-holder">
+        <span>Error</span>
+    </div>
+    <!-- Сообщение об ошибке КОНЕЦ -->
+    <div class="holder type">
+        <div class="options-header">
+            <a href="editarticle.html" class="button green">Добавить статью +</a>
+        </div>
+        <div class="search padding20">
+            <input type="text" id="search-article" placeholder="Введите название статьи">
+        </div>
+        <div class="articles v-list flex-full padding20">
+            <!-- Статья -->
+            <div class="v-item flex-row">
+                <div class="image">
+                    <img src="../files/02/mainimage-min.jpg" width="40" height="40" alt="Любовь к няшным котикам">
+                </div>
+                <div class="title">Любовь к няшным котикам</div>
+                <div class="created flex-col">
+                    <span>Создана: Вт, 31. Янв 2017, в 19:9</span>
+                    <span>Обновлена: Пт, 10. Фев 2017, в 16:56</span>
+                </div>
+                <div class="published">
+                    <span class="no">Не опубликована</span>
+                </div>
+                <div class="buttons">
+                    <a href="editarticle.html" class="button green">Редактор</a>
+                </div>
+            </div>
+            <!-- Статья КОНЕЦ -->
+            <div class="v-item flex-row">
+                <div class="image">
+                    <img src="../files/05/mainimage-min.jpg" width="40" height="40" alt="Что можно сделать из пластиковой бутылки">
+                </div>
+                <div class="title">Что можно сделать из пластиковой бутылки</div>
+                <div class="created flex-col">
+                    <span>Создана: Пт, 27. Янв 2017, в 21:59</span>
+                    <span>Обновлена: Пн, 30. Янв 2017, в 18:40</span>
+                </div>
+                <div class="published">
+                    <span class="yes">Опубликована</span>
+                </div>
+                <div class="buttons">
+                    <a href="editarticle.html" class="button green">Редактор</a>
+                </div>
+            </div>
+            <div class="v-item flex-row">
+                <div class="image">
+                    <img src="../files/08/mainimage-min.jpg" width="40" height="40" alt="Тима и Няша в детстве">
+                </div>
+                <div class="title">Тима и Няша в детстве</div>
+                <div class="created flex-col">
+                    <span>Создана: Пт, 27. Янв 2017, в 21:59</span>
+                    <span>Обновлена: Пт, 27. Янв 2017, в 22:3</span>
+                </div>
+                <div class="published">
+                    <span class="yes">Опубликована</span>
+                </div>
+                <div class="buttons">
+                    <a href="editarticle.html" class="button green">Редактор</a>
+                </div>
+            </div>
+            <div class="v-item flex-row">
+                <div class="image">
+                    <img src="../files/09/mainimage-min.jpg" width="40" height="40" alt="Как Боня читал сценарий к этому видео">
+                </div>
+                <div class="title">Как Боня читал сценарий к этому видео</div>
+                <div class="created flex-col">
+                    <span>Создана: Пт, 27. Янв 2017, в 18:43</span>
+                    <span>Обновлена: Пт, 27. Янв 2017, в 21:46</span>
+                </div>
+                <div class="published">
+                    <span class="yes">Опубликована</span>
+                </div>
+                <div class="buttons">
+                    <a href="editarticle.html" class="button green">Редактор</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <small>#BlondieCode © 2017</small>
+    </footer>
+    <!-- footer КОНЕЦ -->
+</body>
+</html>

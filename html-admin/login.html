@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <title>Админ-панель</title>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="shortcut icon" href="../images/icons/adminfavicon.png">
+    <link rel="stylesheet" href="../styles/admin.css?version=1">
+    <script src="../scripts/jquery-min.js"></script>
+    <script src="../scripts/admin/error.js"></script>
+    <script src="../scripts/admin/login.js?version=1"></script>
+</head>
+<body>
+    <!-- Login header КОНЕЦ -->
+    <header>
+        <div class="flex-row">
+            <div class="title">Введите свой логин и пароль</div>
+        </div>
+    </header>
+    <!-- Login header КОНЕЦ -->
+    <!-- Сообщение об ошибке -->
+    <div class="error-holder">
+        <span>Error</span>
+    </div>
+    <!-- Сообщение об ошибке КОНЕЦ -->
+    <div class="content">
+        <div class="holder">
+            <!-- Форма входа -->
+            <div class="login">
+                <div class="input-row">
+                    <label for="username">Логин</label>
+                    <input type="text" id="username">
+                </div>
+                <div class="input-row">
+                    <label for="pass">Пароль</label>
+                    <input type="password" id="pass">
+                </div>
+                <div class="input-row">
+                    <div class="b-login button green">Войти</div>
+                </div>
+            </div>
+            <!-- Форма входа КОНЕЦ -->
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <small>#BlondieCode © 2017</small>
+    </footer>
+    <!-- footer КОНЕЦ -->
+</body>
+</html>

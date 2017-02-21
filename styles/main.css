@@ -1,0 +1,441 @@
+/*************************** Сброс стилей *****************************/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {content:'';}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/************************* Общие стили ***************************/
+
+body, html {padding: 0;margin: 0; height: 100%}
+body {
+    background: #f6f6f6;
+    color: #2d2d2d;
+    font-family: 'Arial', 'Helvetica';
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1 {font-size: 24px;}
+h2 {font-size: 22px;}
+h3 {font-size: 20px;}
+h4, h5, h6 {font-size: 18px;}
+
+a {color: #ca6a96}
+a:hover {color: #e889b4}
+
+header, footer, main {
+    width: 100%;
+}
+
+header {
+    padding: 50px 0 30px;
+    display: flex;
+    flex-grow: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul li, footer ul li {
+    display: inline-block;
+    margin: 0 20px 0 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+header ul a, footer ul a {
+    color: #2d2d2d;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    transition: .2s;
+}
+header ul a:hover, header ul a.active, footer ul a:hover, footer ul a.active {
+    color: #2d2d2d;
+    border-bottom: 2px solid #2d2d2d;
+    transition: .2s;
+}
+header nav#language {
+    margin: 0 0 10px 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+header nav#language ul li {
+    background: #2d2d2d;
+    color: #f6f6f6;
+    padding: 4px 6px;
+    border-radius: 50%;
+    transition: .2s;
+    font-size: 10px;
+}
+header nav#language ul li:hover, header nav#language ul li.active {background: #ca6a96; transition: .2s;}
+header nav#language ul li a {color: #f6f6f6; border-bottom: none;}
+
+main {
+    flex-grow: 1;
+    line-height: 1.8;
+}
+footer {
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+    border-top: 1px solid #d4d4d4;
+}
+footer small {
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+}
+main h1, main h2, main h3, main h4 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #2d2d2d;
+    margin: 0 0 20px 0;
+}
+main h1 {
+    text-align: center;
+    margin: 30px 0 50px;
+}
+.page-wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.scrolltop {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0,0,0,.75);
+    opacity: .75;
+    cursor: pointer;
+    transition: .3s;
+}
+.scrolltop:hover {
+    opacity: 1;
+    transition: .3s;
+}
+.scrolltop:after {
+    content: "⇪";
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+}
+
+/************************* Страница категории ***************************/
+
+.article-holder {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin: 30px 0 0 0;
+}
+.article-holder article {
+    background: #ffffff;
+    margin: 10px 0 0 0;
+    flex-basis: calc(33% - 4px);
+}
+.article-holder article a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.article-holder article .details {
+    padding: 30px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #7d7d7d;
+    flex-grow: 1;
+}
+.article-holder article h2 {
+    font-weight: 400;
+    font-size: 18px;
+    color: #2d2d2d;
+}
+.article-holder article img {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    transition: .3s
+}
+.article-holder article:hover img {
+    opacity: .75;
+    transition: .3s
+}
+.article-holder article .secondary {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 30px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+.article-holder article .secondary .views {
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    position: relative;
+    padding: 0 0 0 16px;
+}
+.article-holder article .secondary .views:after {
+    display: block;
+    position: absolute;
+    content: '☋';
+    top: 0;
+    left: 0;
+}
+.more {
+    margin: 20px auto 10px;
+    background: #ca6a96;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 4px 10px;
+    transition: .2s;
+    cursor: pointer;
+    display: table;
+}
+.more:hover {
+    background: #e889b4;
+    transition: .2s;
+}
+
+/************************* Страница статей ***************************/
+
+.article-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    width: 100%;
+    margin: 40px 0 0 0;
+}
+.article-wrapper .details {
+    padding: 10px;
+}
+.article-wrapper article .details {
+    padding: 20px;
+}
+.article-wrapper article {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: #ffffff;
+    margin: 0 20px 20px 0;
+    width: 70%;
+    max-width: calc(100% - 320px);
+    flex-grow: 1;
+}
+.article-wrapper article h1 {
+    margin: 30px 0;
+}
+.article-wrapper article .secondary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #999999;
+}
+.article-wrapper article img {
+    margin: 0 0 20px 0;
+    width: 100%;
+    height: auto;
+}
+.article-wrapper aside {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    max-width: 300px;
+}
+.article-wrapper aside a {
+    text-decoration: none;
+    display: block;
+    background: #ffffff;
+    margin: 0 0 20px 0;
+}
+.article-wrapper aside .tags {
+    display: flex;
+    flex-flow: row wrap;
+    background: #ffffff;
+    padding: 20px;
+    margin: 0 0 20px 0;
+}
+.article-wrapper aside .tags a {
+    background: #ca6a96;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 4px 10px;
+    margin: 0 10px 10px 0;
+    transition: .2s;
+}
+.article-wrapper aside .tags a:hover {
+    background: #e889b4;
+    transition: .2s;
+}
+.article-wrapper aside p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #666666;
+}
+.article-wrapper aside h2 {
+    text-transform: none;
+    font-size: 18px;
+    line-height: 1.3;
+    margin: 0 0 12px 0;
+}
+.article-wrapper aside img {
+    width: 100%;
+    height: auto;
+}
+
+/************************* Страница 404 ***************************/
+
+.notfoundpage {
+    text-align: center;
+    font-size: 32px;
+    margin: 30px 0;
+}
+.notfoundpage p {
+    margin: 0 0 20px 0;
+}
+.notfoundpage .small {
+    font-size: 22px;
+}
+.notfoundpage h1 {
+    font-size: 66px;
+}
+.notfoundpage .sad {
+    position: relative;
+    min-height: 120px;
+}
+.notfoundpage .sad:after {
+    position: absolute;
+    content: "☹";
+    color: #999999;
+    font-size: 120px;
+    line-height: 1;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/************************* Мобильные стили ***************************/
+
+@media (max-width: 800px) {
+
+    header {
+        display: block;
+        padding: 10px 0 0 0;
+    }
+    header nav#language {
+        margin: 20px 0 10px;
+        flex-direction: row;
+    }
+    header ul li {
+        margin: 0 20px 20px 0;
+    }
+    main h1 {
+        margin: 20px 0 30px;
+    }
+    .article-holder {
+        margin: 20px 0 0 0;
+    }
+    .article-holder article {
+        flex-basis: calc(50% - 5px);
+    }
+    .scrolltop {
+        bottom: 20px;
+        right: 20px;
+    }
+    .article-wrapper article {
+        display: block;
+        margin: 0 0 20px 0;
+    }
+    .article-wrapper {
+        flex-direction: column;
+    }
+    .article-wrapper aside, .article-wrapper article {
+        max-width: 100%;
+        width: 100%;
+    }
+    .article-wrapper aside img {
+        width: 50px;
+        border-radius: 50%;
+        margin-left: 10px;
+    }
+    .article-wrapper aside a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .article-holder article {
+        flex-basis: 100%;
+    }
+    .scrolltop {
+        bottom: 10px;
+        right: 10px;
+    }
+}
